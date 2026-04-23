@@ -1,12 +1,11 @@
 body
 {
-    background-color:#fee;
+    background-color:#399;
 }
 header
 {
     height:15%;
     width:100%;
-    background-color:#347;
     margin-bottom:2%;
     border-radius: 5px;
 }
@@ -19,12 +18,22 @@ nav
     border-radius: 5px;
     float: left;
 }
+#header
+{
+    width:80%;
+    height:50%;
+    margin-top:4%;
+    margin-bottom:5%;
+    margin-left:10%;
+    margin-right:10%;
+    
+}
 article
 {
     height: 83%;
     width: 54%;
     margin-left:46%;
-    background-color:#fee;
+    background-color:#399;
     border-radius: 5px;
     overflow:auto;
     
