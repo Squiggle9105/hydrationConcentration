@@ -30,13 +30,17 @@ nav
 }
 article
 {
-    height: 83%;
+    height: 90%;
     width: 54%;
     margin-left:46%;
-    background-color:#399;
     border-radius: 5px;
     overflow:auto;
-    
+}
+#droppy
+{
+    height:70%;
+    margin-top:10%;
+    margin-left:20%;
 }
 aside
 {
