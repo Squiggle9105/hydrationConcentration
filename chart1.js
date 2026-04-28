@@ -66,14 +66,17 @@ new Chart (ctx, {
     }
   }
 });
+//reloads chart
 function load()
 {
   Chart.resetChart();
 }
+//sets ozDrank to 0
 function clearOz(){
   ozDrank = 0;
   load();
 }
+
 // will add 4 to ozDrank if button is pressed
 function oz4(){
   ozDrank = ozDrank + 4;

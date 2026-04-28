@@ -41,6 +41,11 @@ article
     height:70%;
     margin-top:10%;
     margin-left:20%;
+    content: url("assets/DROPPY.svg");
+}
+#droppy:hover
+{
+    content: url("assets/DROPPYsmile.svg");
 }
 aside
 {
