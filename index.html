@@ -23,23 +23,27 @@
     <!-- holds user data cells-->
             <table>
                 <tr>
-                    <!-- Top Row first cell with calendar graph-->
+                    <!-- Top Row first cell with bar chart-->
                     <td>
                         <canvas id="waterBar">
                         <!--Chart.js code-->
                             <script src="chart1.js"></script>
                         </canvas>
                     </td>
-                    <!-- Top Row second cell with bar chart-->
+                    <!-- Top Row second cell with pie chart-->
                     <td id="td2">
                     </td>
                 </tr>
                 <tr>
-                    <!-- Bottom row first cell with pie chart-->
+                    <!-- Bottom row first cell with ???-->
                     <td id="td2">
                     </td>
-                    <!-- Bottom row second cell with ???-->
+                    <!-- Bottom row second cell with +oz button-->
                     <td>
+                        <button onclick="oz4()"> +4oz </button>
+                        <button onclick="oz8()"> +8oz </button>
+                        <button onclick="oz16()"> +16oz </button>
+                        <button onclick="oz32()"> +32oz </button>
                     </td>
                 </tr>
             </table>

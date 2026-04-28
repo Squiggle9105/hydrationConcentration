@@ -1,8 +1,18 @@
+// today's date (Date.js)
 const todayDate = new Date();
+// list of days of the week by name
 const weekDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+// array that will store oz drank per day
+var dailyOz = [0,0,0,0,0,0,0];
+// will store oz drank in one day
+var ozDrank = 0; 
+// today as a String
 var today = weekDays[todayDate.getDay()];
+// will hold yesterday as a String
 var yesterday = null;
+// will hold the day before yesterday (or ereyesterday) as a String
 var ereyesterday = null;
+// if today isn't Sunday, yesterday is one spot backward in the array. If today is Sunday, yesterday is at the end of the array.
 if (todayDate.getDay() > 0)
 {
     yesterday = weekDays[todayDate.getDay()-1];
@@ -11,6 +21,7 @@ else
 {
     yesterday = 'Saturday';
 }
+// if today is at least Tuesday, the day before yesterday is two spots backward in the array. If today is Monday, it is at the end of the array, and if today is Sunday, it is two spots backward.
 if (todayDate.getDay() > 1)
 {
     ereyesterday = weekDays[todayDate.getDay()-2];
@@ -23,12 +34,12 @@ else
 {
     ereyesterday = 'Friday';
 }
-
+// fill in values of the graph
 const xValues = [ereyesterday, yesterday, today];
-const yValues = [64,72,16];
+const yValues = [64,72,ozDrank];
 const barColors = ['#347', "#399","#876"];
 
-
+// creates chart (Chart.js)
 const ctx = document.getElementById('waterBar');
 
 new Chart (ctx, {
@@ -46,8 +57,45 @@ new Chart (ctx, {
       title: {
         display: true,
         text: "Ounces per day",
-        font: {size: 16}
+        font: 
+        {
+          family:'Verdana',
+          size: 16,
+        },
       }
     }
   }
 });
+function load()
+{
+  Chart.resetChart();
+}
+function clearOz(){
+  ozDrank = 0;
+  load();
+}
+// will add 4 to ozDrank if button is pressed
+function oz4(){
+  ozDrank = ozDrank + 4;
+  alert(ozDrank);
+  load();
+}
+// will add 8 to ozDrank if button is pressed
+function oz8(){
+  ozDrank = ozDrank + 8;
+  alert(ozDrank);
+  load();
+}
+// will add 16 to ozDrank if button is pressed
+function oz16(){
+  ozDrank = ozDrank + 16;
+  alert(ozDrank);
+  load();
+}
+// will add 32 to ozDrank if button is pressed
+function oz32(){
+  ozDrank = ozDrank + 32;
+  alert(ozDrank);
+  load();
+}
+
