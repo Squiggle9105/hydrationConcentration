@@ -1,25 +1,43 @@
 <html>
     <head>
         <title>Hydration Concentration</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styles.css">
+            <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0"></script>
+            <script src="path/to/dayjs/dayjs.min.js"></script>
     </head>
     <body>
+    <!-- Chart.js v4.5.1vhttps://www.chartjs.org (c) 2025 Chart.js Contributors Released under the MIT License -->
+    <noscript>
+        <div id="noScript">
+            Please Enable Javascript
+        </div>
+    </noscript>
+    <!-- Left Section with User Data-->
         <nav>
         <header>
             <img draggable = "false" id = "header" src = "assets/Untitled-1.png">
         </img>
         </header>
         <aside>
+    <!-- holds user data cells-->
             <table>
                 <tr>
+                    <!-- Top Row first cell with calendar graph-->
                     <td>
+                        <canvas id="waterBar">
+                        <!--Chart.js code-->
+                            <script src="chart1.js"></script>
+                        </canvas>
                     </td>
+                    <!-- Top Row second cell with bar chart-->
                     <td id="td2">
                     </td>
                 </tr>
                 <tr>
+                    <!-- Bottom row first cell with pie chart-->
                     <td id="td2">
                     </td>
+                    <!-- Bottom row second cell with ???-->
                     <td>
                     </td>
                 </tr>

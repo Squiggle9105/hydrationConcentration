@@ -1,3 +1,11 @@
+<html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0"></script>
+<script src="path/to/dayjs/dayjs.min.js"></script>
+<body>
+
+<canvas id="myChart" style="width:80%; height:80%;""></canvas>
+
+<script>
 const todayDate = new Date();
 const weekDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 var today = weekDays[todayDate.getDay()];
@@ -25,13 +33,12 @@ else
 }
 
 const xValues = [ereyesterday, yesterday, today];
-const yValues = [64,72,16];
-const barColors = ['#347', "#399","#876"];
+const yValues = [55, 49, 44];
+const barColors = ["red", "green","blue"];
 
+const ctx = document.getElementById('myChart');
 
-const ctx = document.getElementById('waterBar');
-
-new Chart (ctx, {
+new Chart(ctx, {
   type: "bar",
   data: {
     labels: xValues,
@@ -45,9 +52,13 @@ new Chart (ctx, {
       legend: {display: false},
       title: {
         display: true,
-        text: "Ounces per day",
+        text: "World Wine Production 2018",
         font: {size: 16}
       }
     }
   }
 });
+</script>
+
+</body>
+</html>

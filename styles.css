@@ -54,14 +54,31 @@ table
     background-color:#399;
     border-radius:5px;
     border-spacing:20px;
+    table-layout:fixed;
 }
 td
 {
     background-color:#fe7;
     border-radius:5px;
+    width:20%;
+    height:25%;
+    padding-left:2%;
+    padding-right:2%;
 }
 #td2
 {
     background-color:#fee;
     border-radius:5px;
+    width:20%;
+    height:25%;
+    padding-left:2%;
+    padding-right:2%;
+}
+/* #waterBar
+{
+    background-color:white;
+} */
+#noscript
+{
+    background-color:#fff;
 }
